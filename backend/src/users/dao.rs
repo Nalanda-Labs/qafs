@@ -93,7 +93,7 @@ impl IUser for &AppStateRaw {
                 id: q.id.to_string(),
                 display_name: name,
                 location,
-                profile_image_url: profile_image_url,
+                profile_image_url,
             };
             urs.users.push(ur);
         }

@@ -80,6 +80,7 @@ pub struct Opts {
     #[clap(
         short = 'c',
         long = "config",
+        // parse(from_os_str),
         default_value = "template.json"
     )]
     pub config: PathBuf,

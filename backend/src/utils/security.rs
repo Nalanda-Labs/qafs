@@ -1,6 +1,6 @@
 use std::time::Duration;
 use crate::state::AppState;
-use itsdangerous::{default_builder, IntoTimestampSigner, Signer, TimestampSigner};
+use itsdangerous::{default_builder, IntoTimestampSigner, TimestampSigner};
 
 pub async fn sign(text: &str, state: &AppState) -> String {
     let signer = default_builder(state.config.secret_key.clone())

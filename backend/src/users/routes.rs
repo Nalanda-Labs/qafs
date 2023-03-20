@@ -14,7 +14,6 @@ use lettre::{
 use uuid::Uuid;
 use validator::Validate;
 
-// curl -v --data '{"name": "Bob", "email": "Bob@google.com", "password": "Bobpass"}' -H "Content-Type: application/json" -X POST localhost:8080/user/register
 #[post("/register")]
 async fn register(form: web::Json<Register>, state: AppState) -> impl Responder {
     let form = form.into_inner();
